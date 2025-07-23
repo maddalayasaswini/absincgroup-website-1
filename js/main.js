@@ -1,4 +1,4 @@
-// Main JavaScript for IQVIA Website
+// Main JavaScript for Abs Inc Website
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all components
     initializeNavigation();
