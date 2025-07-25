@@ -45,6 +45,16 @@ function initializeNavigation() {
             }, 100);
         });
     });
+// Close mobile nav when clicking outside
+document.addEventListener('click', function (event) {
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const nav = document.querySelector('.primary-nav');
+    if (!toggle.contains(event.target) && !nav.contains(event.target)) {
+        toggle.classList.remove('active');
+        nav.classList.remove('mobile-open');
+    }
+});
+
 
     // Smooth scrolling for jump links
     const jumpLinks = document.querySelectorAll('.jump-menu a, a[href^="#"]');
@@ -152,30 +162,61 @@ function initializeHeroSlider() {
     startAutoSlide();
 }
 
-// Tab sections functionality
-function initializeTabSections() {
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabPanels = document.querySelectorAll('.tab-panel');
+// function initializeTabSections() {
+//     const tabBtns = document.querySelectorAll('.tab-btn');
+//     const tabPanels = document.querySelectorAll('.tab-panel');
 
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const targetTab = this.dataset.tab;
+//     tabBtns.forEach(btn => {
+//         btn.addEventListener('click', () => {
+//             const targetId = `tab-${btn.dataset.tab}`;
 
-            // Remove active class from all buttons and panels
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabPanels.forEach(p => p.classList.remove('active'));
+//             // Toggle active class on buttons
+//             tabBtns.forEach(b => b.classList.toggle('active', b === btn));
 
-            // Add active class to clicked button
-            this.classList.add('active');
+//             // Toggle active class on panels
+//             tabPanels.forEach(panel => {
+//                 panel.classList.toggle('active', panel.id === targetId);
+//             });
+//         });
+//     });
+// }
+function initializeBiotechInfoButtons() {
+      const buttons = document.querySelectorAll('.info-btn');
+      const contentBox = document.getElementById('biotech-left-content');
 
-            // Show corresponding panel
-            const targetPanel = document.getElementById(`tab-${targetTab}`);
-            if (targetPanel) {
-                targetPanel.classList.add('active');
-            }
+      const contentMap = {
+        regulatory: `
+          <h3>Regulatory</h3>
+          <ul>
+            <li>Regulatory Submissions (CMC & Clinical Data): Expert in INDs/eBLA/eCTDs/NDAs/ANDAs for Biologics (Vaccines, Therapeutic Proteins) & Pharmaceuticals INDs/ANDAs</li>
+            <li>Data Integrity/Audit/Review as 3rd Party for FDA/EMA/WHO submissions</li>
+            <li>Support clients with our consultants</li>
+          </ul>
+        `,
+        experts: `
+          <h3>Unique Experts</h3>
+          <ul>
+            <li>Our consultants launched Biosimilars from R&D to Product Commercial Launch</li>
+            <li>Regulatory writing & submissions</li>
+            <li>Cell Bank/Vaccine Seed Bank Overarching from Current to Enhanced State as per Regulatory Requirements.</li>
+          </ul>
+        `
+      };
+
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const key = button.dataset.key;
+          contentBox.innerHTML = contentMap[key] || "<p>No data found.</p>";
         });
-    });
-}
+      });
+    }
+// Call both initializers
+initializeTabSections();
+initializeBiotechInfoButtons();
+
+
+
+
 
 // Carousel functionality
 function initializeCarousels() {
@@ -420,6 +461,34 @@ function initializeNewsTickerPause() {
         });
     }
 }
+
+// Reviews
+let currentSlide = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+      testimonials.forEach((t, i) => {
+        t.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
+      });
+      currentSlide = index;
+    }
+
+    function changeSlide(direction) {
+      let newIndex = (currentSlide + direction + testimonials.length) % testimonials.length;
+      showSlide(newIndex);
+    }
+
+    function goToSlide(index) {
+      showSlide(index);
+    }
+
+    // Auto-scroll every 2 seconds
+    setInterval(() => {
+      changeSlide(1);
+    }, 2000);
+
 
 // Video play functionality
 document.addEventListener('click', function(e) {

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
-<body>
+<body onload="initializeBiotechInfoButtons()">
     <div class="all-page-wrapper">
         <!-- Header -->
         <header class="header">
@@ -27,25 +27,17 @@
                 <div class="utility-navigation">
                     <div class="utility-navigation-menu">
                         <div class="utility-navigation-menu__inner">
-                            <a class="utility-navigation-button regions">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C3.5942 16 0 12.4058 0 8C0 3.59421 3.5942 2.21142e-06 8 0L8.00375 2.21142e-06C12.4078 0.00204092 16 3.59545 16 8C16 12.4058 12.4058 16 8 16ZM4.46661 7.71015C4.53884 4.02994 5.978 0.907016 7.72213 0.603821C7.71427 0.632109 7.71014 0.662849 7.71014 0.69565V7.71015H4.46661ZM3.88659 8.28986C3.94031 11.3531 4.84304 13.9441 6.17086 15.1957C3.03723 14.4092 0.712321 11.6442 0.585192 8.28986H3.88659ZM3.88659 7.71015H0.585192C0.712322 4.35578 3.03724 1.59081 6.17086 0.804304C4.84304 2.05591 3.94031 4.64689 3.88659 7.71015ZM4.46661 8.28986H7.71014V15.3043C7.71014 15.3371 7.71427 15.3679 7.72213 15.3962C5.978 15.093 4.53884 11.9701 4.46661 8.28986ZM8.28985 8.28986V15.3043C8.28985 15.3371 8.28572 15.3679 8.27786 15.3962C10.022 15.093 11.4612 11.9701 11.5334 8.28986H8.28985ZM12.1134 8.28986C12.0597 11.3531 11.157 13.9441 9.82913 15.1957C12.9628 14.4092 15.2877 11.6442 15.4148 8.28986H12.1134ZM15.4148 7.71015H12.1134C12.0597 4.64689 11.157 2.05591 9.82914 0.804304C12.9628 1.59081 15.2877 4.35577 15.4148 7.71015ZM11.5334 7.71015H8.28985V0.69565C8.28985 0.662848 8.28573 0.632108 8.27787 0.60382C10.022 0.907009 11.4612 4.02994 11.5334 7.71015Z" fill="white" />
-                                </svg>
-                                <span class="text">Choose a Region</span>
-                                <i class="fa-solid fa-chevron-down arrow"></i>
+                            <a href="https://www.facebook.com/Abs Inc" rel="noopener" target="_blank" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a class="utility-navigation-button cta-btn contact-us" href="#contact">
-                                <span class="tile">Contact Us</span>
-                                <div class="arrow-wrapper">
-                                    <span class="line"></span>
-                                    <span class="line"></span>
-                                </div>
+                            <a href="https://x.com/Abs Inc_global" rel="noopener" target="_blank" class="social-link">
+                                <i class="fab fa-twitter"></i>
                             </a>
-                            <a class="utility-navigation-button search" id="search-toggle">
-                                <svg class="icon-open" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M10.2183 1.47754C11.1553 1.47788 12.0713 1.75607 12.8502 2.27693C13.6292 2.79778 14.2363 3.53792 14.5946 4.40375C14.953 5.26959 15.0466 6.22224 14.8635 7.14126C14.6805 8.06027 14.2291 8.90439 13.5664 9.56687C12.9036 10.2294 12.0594 10.6805 11.1403 10.8631C10.2212 11.0458 9.26858 10.9519 8.40288 10.5932C7.53717 10.2345 6.79726 9.62722 6.27669 8.84806C5.75612 8.06889 5.47827 7.15287 5.47827 6.2158C5.47827 5.59342 5.60089 4.97713 5.83912 4.40214C6.07735 3.82716 6.42652 3.30474 6.86669 2.86473C7.30686 2.42472 7.82941 2.07574 8.40448 1.83772C8.97956 1.5997 9.59589 1.47731 10.2183 1.47754V1.47754Z" stroke="white" stroke-width="0.869565" stroke-miterlimit="10" />
-                                    <path d="M6.03476 8.84082L1.04346 13.7678L2.52172 15.246L7.55476 10.3669L6.03476 8.84082Z" stroke="white" stroke-width="0.869565" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                            <a href="https://www.instagram.com/Abs Inc/" rel="noopener" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/Abs Inc" rel="noopener" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin-in"></i>
                             </a>
                         </div>
                     </div>
@@ -67,7 +59,10 @@
                         <nav class="primary-nav">
                             <ul class="nav-menu">
                                 <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link">Solutions</a>
+                                    <a href="/index.html" class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a href="/index/about.html" class="nav-link">About Us</a>
                                     <div class="dropdown-menu solutions-menu">
                                         <div class="dropdown-content">
                                             <div class="menu-section">
@@ -106,13 +101,13 @@
                                                 <img src="https://images.pexels.com/photos/356043/pexels-photo-356043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Our Impact">
                                                 <h5>Impacting People's Lives</h5>
                                                 <p>We strive to help improve outcomes and create a healthier, more sustainable world for people everywhere.</p>
-                                                <a href="#" class="learn-more">LEARN MORE</a>
+                                                <a href="#" class="learn-more">KNOW MORE</a>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link">Products</a>
+                                    <a href="/index/service.html" class="nav-link">Services</a>
                                     <div class="dropdown-menu products-menu">
                                         <div class="dropdown-content">
                                             <div class="menu-section">
@@ -146,13 +141,13 @@
                                                 <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Case Study">
                                                 <h5>CASE STUDY</h5>
                                                 <p>Data in a Day</p>
-                                                <a href="#" class="learn-more">LEARN MORE</a>
+                                                <a href="#" class="learn-more">KNOW MORE</a>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link">Insights</a>
+                                    <a href="/index/team.html" class="nav-link">Team</a>
                                     <!-- <div class="dropdown-menu insights-menu">
                                         <div class="dropdown-content">
                                             <div class="menu-text-section">
@@ -185,7 +180,7 @@
                                     </div> -->
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a href="#" class="nav-link">About</a>
+                                    <a href="/index/spc.html" class="nav-link">SPC</a>
                                     <div class="dropdown-menu about-menu">
                                         <div class="dropdown-content">
                                             <div class="menu-section">
@@ -213,13 +208,16 @@
                                                 <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1" alt="Investor Relations">
                                                 <h5>INVESTOR RELATIONS</h5>
                                                 <p>Visit our investor relations site for more information.</p>
-                                                <a href="#" class="learn-more">LEARN MORE</a>
+                                                <a href="#" class="learn-more">KNOW MORE</a>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">Careers</a>
+                                    <a href="/index/spc.html" class="nav-link">Careers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/index/contact.html" class="nav-link">Contact Us</a>
                                 </li>
                             </ul>
                         </nav>
@@ -244,15 +242,12 @@
                 <div class="hero-slide active">
                     <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')"></div>
                     <div class="hero-content">
-                        <h5 class="hero-subtitle">Abs Inc Event: TechIQ 2025</h5>
-                        <h1 class="hero-title">See the future of AI & technology in life sciences</h1>
-                        <p class="hero-description">Transformative strategies, AI, and tech are shaping the future of our industry. See what's coming and join the discussion at Abs Inc's TechIQ conference in London, September 9-10.</p>
+                        <!-- <h5 class="hero-subtitle">Abs Inc Event: TechIQ 2025</h5> -->
+                        <h1 class="hero-title">ABS Inc. USA</h1>
+                        <p class="hero-description">A Strategic Consulting Consortium with extensive experience of professional consultants in Biopharma and Pharmaceutical, Biotechnology, Medical device and Diagnostic Industries.</p>
                         <a href="#" class="cta-btn">
-                            <span class="tile">Learn more</span>
-                            <div class="arrow-wrapper">
-                                <span class="line"></span>
-                                <span class="line"></span>
-                            </div>
+                            <span class="tile">Know More</span>
+                            <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -260,15 +255,11 @@
                 <div class="hero-slide">
                     <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')"></div>
                     <div class="hero-content">
-                        <h5 class="hero-subtitle">Abs Inc Healthcare-grade AI®</h5>
                         <h1 class="hero-title">Abs Inc partnering with NVIDIA to accelerate Healthcare-grade AI®</h1>
                         <p class="hero-description">This collaboration will create new ways for customers to accelerate their efforts to improve patient outcomes.</p>
                         <a href="#" class="cta-btn">
-                            <span class="tile">Learn more</span>
-                            <div class="arrow-wrapper">
-                                <span class="line"></span>
-                                <span class="line"></span>
-                            </div>
+                            <span class="tile">Know more</span>
+                            <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -276,15 +267,11 @@
                 <div class="hero-slide">
                     <div class="hero-bg" style="background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')"></div>
                     <div class="hero-content">
-                        <h5 class="hero-subtitle">Industry Recognition</h5>
                         <h1 class="hero-title">Abs Inc named to Fortune® World's Most Admired Companies™ list</h1>
                         <p class="hero-description">Abs Inc is proud to be included in Fortune® "World's Most Admired Companies™" list 2025 for the eighth consecutive year.</p>
                         <a href="#" class="cta-btn">
-                            <span class="tile">Learn more</span>
-                            <div class="arrow-wrapper">
-                                <span class="line"></span>
-                                <span class="line"></span>
-                            </div>
+                            <span class="tile">Know more</span>
+                            <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                 </div>
@@ -300,32 +287,6 @@
                 <button title="btn" class="hero-next"><i class="fa-solid fa-angle-right"></i></button>
             </div>
         </section>
-
-        <!-- Jump Links Navigation -->
-        <nav class="jump-links">
-            <div class="jump-links-wrapper">
-                <span class="on-this-page">On This Page</span>
-                <ul class="jump-menu">
-                    <li><a href="#our-difference">Our Difference</a></li>
-                    <li><a href="#explore-solutions">Explore Solutions</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#expertise">Expertise</a></li>
-                    <li><a href="#insights">Insights</a></li>
-                    <li><a href="#careers">Careers</a></li>
-                </ul>
-                <div class="share-wrapper">
-                    <button title="btn" class="share-btn">
-                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.5 10.579C3.60457 10.579 4.5 9.68358 4.5 8.57901C4.5 7.47444 3.60457 6.57901 2.5 6.57901C1.39543 6.57901 0.5 7.47444 0.5 8.57901C0.5 9.68358 1.39543 10.579 2.5 10.579Z" stroke="#959CA0" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M13.167 4.57901C14.2716 4.57901 15.167 3.68358 15.167 2.57901C15.167 1.47444 14.2716 0.57901 13.167 0.57901C12.0624 0.57901 11.167 1.47444 11.167 2.57901C11.167 3.68358 12.0624 4.57901 13.167 4.57901Z" stroke="#959CA0" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M13.167 16.579C14.2716 16.579 15.167 15.6836 15.167 14.579C15.167 13.4744 14.2716 12.579 13.167 12.579C12.0624 12.579 11.167 13.4744 11.167 14.579C11.167 15.6836 12.0624 16.579 13.167 16.579Z" stroke="#959CA0" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M4.24316 9.55942L11.424 13.5986" stroke="#959CA0" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M11.424 3.55942L4.24316 7.59858" stroke="#959CA0" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </nav>
 
         <!-- News Ticker -->
         <section class="news-ticker">
@@ -365,16 +326,38 @@
                         </div>
                     </div>
                     <div class="content-right">
-                        <h3>Empowering Life Sciences Success Through Proven Expertise</h3>
-                        <p>The life sciences and healthcare sectors are constantly advancing—and so are the challenges you face. At ABS Inc. Group, we understand what it takes to deliver results in a rapidly changing regulatory environment.</p>
-                        <p>With our unique consortium model, we connect you with seasoned professionals, actionable insights, and advanced solutions tailored to your needs. By integrating deep industry knowledge with the latest in compliance, quality systems, analytics, and technology, we help you overcome obstacles and unlock new opportunities for growth and success.</p>
+                        <h3>Our Mission</h3>
+                        <p>Our mission is to provide top notch World class consultants and technical experts to our clients companies and partnering clients.</p>
+                        <!-- <p>With our unique consortium model, we connect you with seasoned professionals, actionable insights, and advanced solutions tailored to your needs. By integrating deep industry knowledge with the latest in compliance, quality systems, analytics, and technology, we help you overcome obstacles and unlock new opportunities for growth and success.</p> -->
                         <a href="#" class="cta-btn">
-                            <span class="tile">Learn more</span>
-                            <div class="arrow-wrapper">
-                                <span class="line"></span>
-                                <span class="line"></span>
-                            </div>
+                            <span class="tile" href="/index/contact.html">Get in Touch</span>
+                            <i class="fa-solid fa-angle-right"></i>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="our-difference" class="fifty-fifty-section">
+            <div class="container">
+                <div class="fifty-fifty-content">
+                   
+                    <div class="content-right">
+                        <h3>Our Vision</h3>
+                        <p>Our mission is to provide top notch World class consultants and technical experts to our clients companies and partnering clients.</p>
+                        <a href="#" class="cta-btn">
+                            <span class="tile" href="/index/contact.html">Get in Touch</span>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                    </div>
+                     <div class="content-left">
+                        <div class="video-container">
+                            <div class="video-placeholder">
+                                <img src="https://images.pexels.com/photos/3825581/pexels-photo-3825581.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="Connected Intelligence">
+                                <div class="play-button">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -403,182 +386,35 @@
             <div class="container">
                 <div class="tab-module">
                     <div class="tab-navigation">
-                        <button class="tab-btn active" data-tab="rd">Quality & Compliance</button>
+                        <!-- <button class="tab-btn active" data-tab="rd">Quality & Compliance</button>
                         <button class="tab-btn" data-tab="rwe">Regulatory Affairs</button>
                         <button class="tab-btn" data-tab="comm">Validation & Engineering</button>
                         <button class="tab-btn" data-tab="compliance">Process Optimization & Analytics</button>
-                        <button class="tab-btn" data-tab="tech">Technology & Data Integrity</button>
-                        <button class="tab-btn" data-tab="biotech">Product & Clinical Development Support</button>
+                        <button class="tab-btn" data-tab="tech">Technology & Data Integrity</button> -->
+                        <h1 class="tab-btn" data-tab="biotech">Consultants Focus Areas</h1>
                     </div>
                     
-                    <div class="tab-content">
-                        <div class="tab-panel active" id="tab-rd">
-                            <div class="fifty-fifty-content reverse">
-                                <div class="content-left">
-                                    <div class="video-container">
-                                        <div class="video-placeholder">
-                                            <img src="https://images.pexels.com/photos/3825569/pexels-photo-3825569.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="Research & Development">
-                                            <div class="play-button">
-                                                <i class="fas fa-play"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-right">
-                                    <h3>Ensure Compliance. Safeguard Quality. Empower Progress.</h3>
-                                    <p>Stay ahead of evolving regulations. Our expert-led solutions in quality assurance, cGMP compliance, and remediation equip you to pass inspections, protect patients, and maintain production flow—every step of the way.</p>
-                                    <a href="#" class="cta-btn">
-                                        <span class="tile">Learn More</span>
-                                        <div class="arrow-wrapper">
-                                            <span class="line"></span>
-                                            <span class="line"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="tab-panel" id="tab-rwe">
-                            <div class="fifty-fifty-content reverse">
-                                <div class="content-left">
-                                    <div class="video-container">
-                                        <div class="video-placeholder">
-                                            <img src="https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="Real World Evidence">
-                                            <div class="play-button">
-                                                <i class="fas fa-play"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-right">
-                                    <h3>Navigate Regulations with Confidence and Clarity.</h3>
-                                    <p>Streamline global product registrations and submissions. ABS Inc. Group’s seasoned regulatory specialists help you manage complex FDA and international documentation, submissions, and audit responses for faster, smoother approvals.</p>
-                                    <a href="#" class="cta-btn">
-                                        <span class="tile">Learn More</span>
-                                        <div class="arrow-wrapper">
-                                            <span class="line"></span>
-                                            <span class="line"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <div id="biotech-left-content">
+      <p>Quality & Compliance</p>
+    </div>
 
-                        <div class="tab-panel" id="tab-comm">
-                            <div class="fifty-fifty-content reverse">
-                                <div class="content-left">
-                                    <div class="video-container">
-                                        <div class="video-placeholder">
-                                            <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="Commercialization">
-                                            <div class="play-button">
-                                                <i class="fas fa-play"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-right">
-                                    <h3>Precision-Driven Validation for Unmatched Performance.</h3>
-                                    <p>From laboratory to manufacturing floor, our team delivers robust validation and engineering support—including equipment, facilities, utilities, and process validation—to ensure your operations meet the highest industry benchmarks.</p>
-                                    <a href="#" class="cta-btn">
-                                        <span class="tile">Learn More</span>
-                                        <div class="arrow-wrapper">
-                                            <span class="line"></span>
-                                            <span class="line"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Right buttons -->
+    <div class="content-right">
+      <button class="info-btn" data-key="regulatory">Regulatory <i class="fa-solid fa-angle-down"></i></button>
+      <button class="info-btn" data-key="experts">Unique Experts <i class="fa-solid fa-angle-down"></i></button>
+    </div>
+  </div>
 
-                        <div class="tab-panel" id="tab-compliance">
-                            <div class="fifty-fifty-content reverse">
-                                <div class="content-left">
-                                    <div class="video-container">
-                                        <div class="video-placeholder">
-                                            <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="Compliance">
-                                            <div class="play-button">
-                                                <i class="fas fa-play"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-right">
-                                    <h3>Unlock Operational Excellence Through Insight.</h3>
-                                    <p>Transform your processes with data-driven expertise. Using Lean Six Sigma, advanced analytics, and proven methodologies, we help you eliminate inefficiencies, accelerate timelines, and drive sustained improvement across your organization.</p>
-                                    <a href="#" class="cta-btn">
-                                        <span class="tile">Learn More</span>
-                                        <div class="arrow-wrapper">
-                                            <span class="line"></span>
-                                            <span class="line"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+  </div>
+</div>
 
-                        <div class="tab-panel" id="tab-tech">
-                            <div class="fifty-fifty-content reverse">
-                                <div class="content-left">
-                                    <div class="video-container">
-                                        <div class="video-placeholder">
-                                            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1" alt="Technologies">
-                                            <div class="play-button">
-                                                <i class="fas fa-play"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-right">
-                                    <h3>Accelerate Breakthroughs from Concept to Market.</h3>
-                                    <p>Support innovation with end-to-end product and clinical development consulting. We guide your programs through R&D, clinical compliance, analytical testing, and product launch to maximize success and patient impact.</p>
-                                    <a href="#" class="cta-btn">
-                                        <span class="tile">Learn More</span>
-                                        <div class="arrow-wrapper">
-                                            <span class="line"></span>
-                                            <span class="line"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-panel" id="tab-biotech">
-                            <div class="fifty-fifty-content reverse">
-                                <div class="content-left">
-                                    <div class="accordion-tiles">
-                                        <div class="tile-container">
-                                            <button class="tile-btn">
-                                                <span class="tile-heading">Commercial solutions</span>
-                                                <i class="fas fa-chevron-down"></i>
-                                            </button>
-                                            <div class="tile-content">
-                                                <p>Maximize your asset's probability of success in a complex, competitive environment with comprehensive solutions that intelligently connect best-in-class insights, technology, and expertise.</p>
-                                            </div>
-                                        </div>
-                                        <div class="tile-container">
-                                            <button class="tile-btn">
-                                                <span class="tile-heading">Clinical solutions</span>
-                                                <i class="fas fa-chevron-down"></i>
-                                            </button>
-                                            <div class="tile-content">
-                                                <p>Abs Inc Biotech provides full-service clinical development solutions with specialized, dedicated teams.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content-right">
-                                    <h3>Accelerate asset success to improve patient outcomes.</h3>
-                                    <p>Explore intelligently designed, flexible solutions that are right for you across clinical development, evidence generation and commercial execution to maximize the value of your asset.</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Products Carousel -->
-        <section id="products" class="products-carousel">
+        <!-- <section id="products" class="products-carousel">
             <div class="container">
                 <div class="carousel-container" id="products-carousel">
                     <div class="carousel-slide active">
@@ -588,11 +424,8 @@
                                 <h3>Gain Strategic Insights for Smarter Decisions</h3>
                                 <p>With ABS Inc. Group’s expert-driven market intelligence, you receive timely, actionable insights tailored to your specific needs. Empower your team to make confident decisions, seize new opportunities, and navigate complex market landscapes with precision.</p>
                                 <a href="#" class="cta-btn">
-                                    <span class="tile">Learn More</span>
-                                    <div class="arrow-wrapper">
-                                        <span class="line"></span>
-                                        <span class="line"></span>
-                                    </div>
+                                    <span class="tile">Know More</span>
+                                    <i class="fa-solid fa-angle-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -605,11 +438,8 @@
                                 <h3>An eCOA solution built for you. Designed for your patients</h3>
                                 <p>Improve the patient experience, enhance data quality and accelerate clinical trials by combining best-in-class eCOA technology with industry-leading expertise.</p>
                                 <a href="#" class="cta-btn">
-                                    <span class="tile">Learn more</span>
-                                    <div class="arrow-wrapper">
-                                        <span class="line"></span>
-                                        <span class="line"></span>
-                                    </div>
+                                    <span class="tile">Know more</span>
+                                    <i class="fa-solid fa-angle-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -622,11 +452,8 @@
                                 <h3>Pay sites fast</h3>
                                 <p>Pay sites in 30 days, even in difficult locales, and remove the burden of administering clinical trials payments by up to 90%</p>
                                 <a href="#" class="cta-btn">
-                                    <span class="tile">Learn more</span>
-                                    <div class="arrow-wrapper">
-                                        <span class="line"></span>
-                                        <span class="line"></span>
-                                    </div>
+                                    <span class="tile">Know more</span>
+                                    <i class="fa-solid fa-angle-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -643,10 +470,10 @@
                     <button class="carousel-next"><span>Next</span><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Expertise Stats -->
-        <section id="expertise" class="stats-section">
+        <!-- <section id="expertise" class="stats-section">
             <div class="container">
                 <div class="stats-header">
                     <h3>Expertise where it counts</h3>
@@ -668,49 +495,83 @@
                         <div class="stat-number">46%</div>
                         <p>Faster clinical trial site identification</p>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-number">13K+</div>
-                        <p>Technology experts building solutions that meet unique needs in healthcare</p>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">85%</div>
-                        <p>Percentage of global pharma sales tracked</p>
-                    </div>
+
                 </div>
             </div>
+        </section> -->
+        <section>
+            <div class="carousel">
+    <div class="testimonial active">
+      <img src="https://i.pravatar.cc/100?img=1" alt="User 1">
+      <p>My favorite espresso. Anyone who enjoys a good espresso should definitely order their espresso! And it’s clean, like all their coffee; no added poisons. Can’t beat that. Enjoy!!</p>
+      <div class="quote">❝</div>
+      <div class="name">Barbara Leone</div>
+      <div class="role">App Developer</div>
+    </div>
+
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/100?img=2" alt="User 2">
+      <p>This product changed my workflow completely. Clean design, excellent support. Highly recommend to anyone who values quality work.</p>
+      <div class="quote">❝</div>
+      <div class="name">Daniel Kim</div>
+      <div class="role">UI/UX Designer</div>
+    </div>
+
+    <div class="testimonial">
+      <img src="https://i.pravatar.cc/100?img=3" alt="User 3">
+      <p>I love using this app every day. It’s intuitive, fast, and has all the features I need to stay productive at work.</p>
+      <div class="quote">❝</div>
+      <div class="name">Sophie Turner</div>
+      <div class="role">Project Manager</div>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots">
+      <span class="dot active" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+    </div>
+  </div>
+
         </section>
 
         <!-- Insights Section -->
         <section id="insights" class="insights-section">
             <div class="container">
+                <div class="stats-header">
+                    <h3>Team</h3>
+                </div>
                 <div class="insights-grid">
                     <div class="insight-card large">
                         <div class="card-image" style="background-image: url('https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1')"></div>
                         <div class="card-content">
-                            <h3>Insights Library</h3>
-                            <p>Find out about the latest from Abs Inc data scientists, doctors, researchers, and other experts on the topics that matter to you.</p>
-                            <a href="#" class="cta-btn">
-                                <span class="tile">Explore Now</span>
-                                <div class="arrow-wrapper">
-                                    <span class="line"></span>
-                                    <span class="line"></span>
-                                </div>
-                            </a>
+                            <h3>Dr. Niranjan Kumar</h3>
+                            <p>President & CEO</p>
                         </div>
                     </div>
                     
                     <div class="insight-card large">
                         <div class="card-image" style="background-image: url('https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1')"></div>
                         <div class="card-content">
-                            <h3>Abs Inc Institute</h3>
-                            <p>The Abs Inc Institute for Human Data Science contributes to the advancement of human health globally.</p>
-                            <a href="#" class="cta-btn">
-                                <span class="tile">Explore Now</span>
-                                <div class="arrow-wrapper">
-                                    <span class="line"></span>
-                                    <span class="line"></span>
-                                </div>
-                            </a>
+                            <h3>Dr. Safee.U. Choudari</h3>
+                            <p>Managing Partner and COO</p>
+                        </div>
+                    </div>
+
+                    <div class="insight-card large">
+                        <div class="card-image" style="background-image: url('https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1')"></div>
+                        <div class="card-content">
+                            <h3>Ms. Sheila Smith</h3>
+                            <p>Client Relationship and Accounts Management Director</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="insight-card large">
+                        <div class="card-image" style="background-image: url('https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1')"></div>
+                        <div class="card-content">
+                            <h3>Mr. V. Nathan</h3>
+                            <p>Business Development Manager</p>
                         </div>
                     </div>
                 </div>
@@ -718,7 +579,7 @@
         </section>
 
         <!-- Careers Section -->
-        <section id="careers" class="careers-section">
+        <!-- <section id="careers" class="careers-section">
             <div class="container">
                 <div class="fifty-fifty-content reverse">
                     <div class="content-left">
@@ -736,33 +597,30 @@
                         <p>We want to make a difference for patients. With diverse expertise, innovative thinking, and powerful capabilities, Abs Inc helps customers get better results, so patients can have better outcomes. Explore more to see how your skills can help.</p>
                         <a href="#" class="cta-btn">
                             <span class="tile">Apply today</span>
-                            <div class="arrow-wrapper">
-                                <span class="line"></span>
-                                <span class="line"></span>
-                            </div>
+                            <i class="fa-solid fa-angle-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Footer Disclaimer -->
-        <section class="disclaimer">
-            <div class="container">
-                <p><small>* From Fortune, ©2025 Fortune Media IP Limited. All rights reserved. Used under license. Fortune® is a registered trademark and Fortune World's Most Admired Companies™ is a trademark of Fortune Media IP Limited and are used under license. Fortune and Fortune Media IP Limited are not affiliated with, and do not endorse the products or services of, Abs Inc.</small></p>
+        </section> -->
+        <section class="contact-section">
+            <!-- Left Side - Google Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019445888666!2d-122.41941518467806!3d37.77492977975908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e2a6ebac233%3A0xb6cf697c46afbc06!2sSan%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1632942877512!5m2!1sen!2sus" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+            <!-- Right Side - Contact Form -->
+            <div class="form-container">
+                <h2>Contact Us</h2>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
             </div>
         </section>
 
-        <!-- Contact CTA Button -->
-        <div class="contact-cta-fixed">
-            <a href="#contact" class="cta-btn">
-                <span class="tile">Contact Us</span>
-                <div class="arrow-wrapper">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
-            </a>
-        </div>
 
         <!-- Footer -->
         <footer class="footer">
@@ -828,6 +686,35 @@
             <i class="fas fa-chevron-up"></i>
         </button>
     </div>
+
+    <script>
+  const tileButtons = document.querySelectorAll('.tile-btn');
+  const contentRight = document.querySelector('.content-right');
+
+  const tileData = {
+    'Regulatory': {
+      heading: 'Regulatory Excellence',
+      text: "Maximize your asset's probability of success in a complex, competitive environment with comprehensive solutions that intelligently connect best-in-class insights, technology, and expertise."
+    },
+    'Unique Experts': {
+      heading: 'Dedicated Clinical Experts',
+      text: "Abs Inc Biotech provides full-service clinical development solutions with specialized, dedicated teams."
+    }
+  };
+
+  tileButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const title = button.querySelector('.tile-heading').innerText;
+
+      if (tileData[title]) {
+        contentRight.innerHTML = `
+          <h3>${tileData[title].heading}</h3>
+          <p>${tileData[title].text}</p>
+        `;
+      }
+    });
+  });
+</script>
 
     <script src="js/main.js"></script>
 </body>
